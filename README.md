@@ -90,7 +90,7 @@ With this database schema and relationships, user information (username and avat
 
 ## API Contract
 ### #Video
-#### POST /create
+**#### POST /create**
 Create a new video and returns the new object
 - URL Params
 
@@ -113,7 +113,7 @@ code: 200
 
 content: ```{ <video_object> }```
 
-#### GET /list
+**#### GET /list**
 Returns all videos in the system.
 - URL Params
 
