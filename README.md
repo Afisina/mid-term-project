@@ -110,7 +110,35 @@ Content-Type: application/json
 - Success Response
 
 code: 200
+
 content: ```{ <video_object> }```
+
+#### GET /list
+Returns all videos in the system.
+- URL Params
+
+None
+- Headers
+
+Content-Type: application/json
+- Data Params
+
+None
+- Success Response
+
+code: 200
+
+content: 
+```
+{
+   videos: [
+             <video_object>,
+             <video_object>,
+             <video_object>
+           ]
+}
+```
+
 ## Installation
 1. Clone the repository
 ```bash
