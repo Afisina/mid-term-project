@@ -91,6 +91,19 @@ With this database schema and relationships, user information (username and avat
 ## Installation
 1. Clone the repository
 ```bash
-git clone https://github.com/Afisina/mid-term-project/tree/master
+git clone https://github.com/Afisina/mid-term-project.git
 ```
-2. 
+2. Install dependencies
+```bash
+cd mid-term-project
+npm install
+```
+3. Setting Up MongoDB Connection (change database url in the .env file)
+```javascript
+DATABASE_URL = mongodb://127.0.0.1/tokopedia_play_clone
+```
+4. Start the server
+```
+npm install
+```
+5. The server should be running on http://localhost:3000
