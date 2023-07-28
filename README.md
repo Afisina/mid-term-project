@@ -1,4 +1,4 @@
-# mid-term-project
+ mid-term-project
 ___________________________
 This is a [tokopedia play](https://www.tokopedia.com/play/channels) clone application built using Express.js and MongoDB, allowing users to view videos with thumbnails, see related products, and interact with comments. 
 
