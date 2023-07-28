@@ -1,14 +1,20 @@
 # mid-term-project
 This is a [tokopedia play](https://www.tokopedia.com/play/channels) clone application built using Express.js and MongoDB, allowing users to view videos with thumbnails, see related products, and interact with comments. 
 
+List of contents :
+1. Requirements
+2. Database Structure
+3. API Structure
+4. API Contract
+5. Installation
 
-## Requirements
+## 1. Requirements
 1. Node.js
 2. MongoDB
 3. Postman (for API testing)
    
 
-## Database Structure
+## 2. Database Structure
 ![Untitled Workspace](https://github.com/Afisina/mid-term-project/assets/39270680/4e92eeba-6e0e-419f-81df-c11814a17221)
 The UML diagram represents the MongoDB database schema for the application, consisting of four collections: Video, Product, Comment, and User.
 
@@ -62,7 +68,7 @@ Relationships:
 With this database schema and relationships, user information (username and avatar) can be associated with comments, allowing the application to display the username and avatar for each comment.
 
 
-## API Structure
+## 3. API Structure
 ```bash
 /api
 |-- /video
@@ -88,7 +94,7 @@ With this database schema and relationships, user information (username and avat
 |
 ```
 
-## API Contract
+## 4. API Contract
 ### ▶️ Video
 ### 🚩 POST /create
 Create a new video and returns the new object
@@ -334,8 +340,90 @@ Get comments by videoID
   code: 500
 
   content: ```{ error : "Failed to fetch comments"}```
+
+### ▶️ User
+### 🚩 POST /create
+Create a new user and returns the new object
+- URL Params
+
+  None
+- Headers
+
+  Content-Type: application/json
+- Data Params
+  ```
+  {
+     username: string,
+     avatar: string,
+  }
+  ```
+- Success Response
+
+  code: 200
+
+  content: ```{ <user_object> }```
+- Error Response
+
+  code: 500
+
+  content: ```{ error : "Failed to create user"}```
+
+### 🚩 GET /list
+Returns all users in the system
+- URL Params
+
+  None
+- Headers
+
+  Content-Type: application/json
+- Data Params
+
+  None
+- Success Response
+
+  code: 200
+
+  content: 
+  ```
+  {
+     users: [
+               <user_object>,
+               <user_object>,
+               <user_object>
+             ]
+  }
+  ```
+- Error Response
+
+  code: 500
+
+  content: ```{ error : "Failed to fetch user"}```
+
+
+### 🚩 GET /list/:userID
+Returns the specified user
+- URL Params
+
+  Required: ```userID=[string]```
+- Headers
+
+  Content-Type: application/json
+- Data Params
+
+  None
+- Success Response
+
+  code: 200
+
+  content: ```{ <user_object> }```
+
+- Error Response
+
+  code: 500
+
+  content: ```{ error : "Failed to fetch user"}```
   
-## Installation
+## 5. Installation
 1. Clone the repository
 ```bash
 git clone https://github.com/Afisina/mid-term-project.git
@@ -351,6 +439,6 @@ DATABASE_URL = mongodb://127.0.0.1/tokopedia_play_clone
 ```
 4. Start the server
 ```
-npm install
+npm start
 ```
 5. The server should be running on http://localhost:3000
