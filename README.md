@@ -1,4 +1,5 @@
 # mid-term-project
+___________________________
 This is a [tokopedia play](https://www.tokopedia.com/play/channels) clone application built using Express.js and MongoDB, allowing users to view videos with thumbnails, see related products, and interact with comments. 
 
 
@@ -9,6 +10,7 @@ This is a [tokopedia play](https://www.tokopedia.com/play/channels) clone applic
    
 
 ## Database Structure
+----------------------
 ![Untitled Workspace](https://github.com/Afisina/mid-term-project/assets/39270680/4e92eeba-6e0e-419f-81df-c11814a17221)
 The UML diagram represents the MongoDB database schema for the application, consisting of four collections: Video, Product, Comment, and User.
 
