@@ -87,7 +87,8 @@ With this database schema and relationships, user information (username and avat
 |   |-- PUT   /:userID/update-avatar     # Update avatar for a user
 |
 ```
-
+## API Contract
+### POST /create
 ## Installation
 1. Clone the repository
 ```bash
