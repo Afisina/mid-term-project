@@ -93,11 +93,13 @@ With this database schema and relationships, user information (username and avat
 #### POST /create
 Create a new video and returns the new object
 - URL Params
+
 None
 - Headers
+
 Content-Type: application/json
 - Data Params
-```json
+```
 {
    videoID: string,
    thumbnailUrl: string,
@@ -106,7 +108,9 @@ Content-Type: application/json
 }
 ```
 - Success Response
+
   code: 200
+
   content: ```{ <video_object> }```
 ## Installation
 1. Clone the repository
