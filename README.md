@@ -89,8 +89,6 @@ With this database schema and relationships, user information (username and avat
 |   |-- POST  /create                    # Create a new user
 |   |-- GET   /list                      # Get all users
 |   |-- GET   /:userID                   # Get a user by userID
-|   |-- PUT   /:userID/update-username   # Update username for a user
-|   |-- PUT   /:userID/update-avatar     # Update avatar for a user
 |
 ```
 
