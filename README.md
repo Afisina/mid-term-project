@@ -171,6 +171,101 @@ Returns the specified video.
   code: 500
 
   content: ```{ error : "Failed to fetch video"}```
+
+### ▶️ Product
+### 🚩 POST /create
+Create a new product and returns the new object
+- URL Params
+
+  None
+- Headers
+
+  Content-Type: application/json
+- Data Params
+  ```
+  {
+     productID: string,
+     videoID: string,
+     photoProduct: string,
+     link: string,
+     title: string,
+     price: number
+  }
+  ```
+- Success Response
+
+  code: 200
+
+  content: ```{ <product_object> }```
+- Error Response
+
+  code: 500
+
+  content: ```{ error : "Failed to create product"}```
+
+### 🚩 GET /list
+Returns all product in the system.
+- URL Params
+
+  None
+- Headers
+
+  Content-Type: application/json
+- Data Params
+
+  None
+- Success Response
+
+  code: 200
+
+  content: 
+  ```
+  {
+     products: [
+               <product_object>,
+               <product_object>,
+               <product_object>
+             ]
+  }
+  ```
+- Error Response
+
+  code: 500
+
+  content: ```{ error : "Failed to fetch product"}```
+
+
+### 🚩 GET /list/:videoID
+Returns the specified product by videoID.
+- URL Params
+
+  Required: ```videoID=[string]```
+- Headers
+
+  Content-Type: application/json
+- Data Params
+
+  None
+- Success Response
+
+  code: 200
+
+  content:
+   ```
+  {
+     products: [
+               <product_object>,
+               <product_object>,
+               <product_object>
+             ]
+  }
+  ```
+- Error Response
+
+  code: 500
+
+  content: ```{ error : "Failed to fetch product"}```
+  
 ## Installation
 1. Clone the repository
 ```bash
