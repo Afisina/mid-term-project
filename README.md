@@ -131,7 +131,15 @@ None
 code: 200
 
 content: 
-```{ <video_object> }```
+```
+{
+   videos: [
+             <video_object>,
+             <video_object>,
+             <video_object>
+           ]
+}
+```
 - Error Response
    - code: 
 ________
@@ -151,15 +159,7 @@ None
 code: 200
 
 content: 
-```
-{
-   videos: [
-             <video_object>,
-             <video_object>,
-             <video_object>
-           ]
-}
-```
+```{ <video_object> }```
 
 ## Installation
 1. Clone the repository
