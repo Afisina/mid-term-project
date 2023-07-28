@@ -87,8 +87,27 @@ With this database schema and relationships, user information (username and avat
 |   |-- PUT   /:userID/update-avatar     # Update avatar for a user
 |
 ```
+
 ## API Contract
-### POST /create
+### #Video
+#### POST /create
+Create a new video and returns the new object
+- URL Params
+None
+- Headers
+Content-Type: application/json
+- Data Params
+```json
+{
+   videoID: string,
+   thumbnailUrl: string,
+   title: string,
+   description: string
+}
+```
+- Success Response
+  code: 200
+  content: ```{ <video_object> }```
 ## Installation
 1. Clone the repository
 ```bash
