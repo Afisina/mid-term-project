@@ -109,9 +109,8 @@ Content-Type: application/json
 ```
 - Success Response
 
-  code: 200
-
-  content: ```{ <video_object> }```
+code: 200
+content: ```{ <video_object> }```
 ## Installation
 1. Clone the repository
 ```bash
