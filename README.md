@@ -89,9 +89,9 @@ With this database schema and relationships, user information (username and avat
 ```
 
 ## API Contract
-### #Video
+### ▶️ Video
 _________________
-#### POST /create
+### 🚩 POST /create
 Create a new video and returns the new object
 - URL Params
 
@@ -115,11 +115,31 @@ code: 200
 content: ```{ <video_object> }```
 
 ______________
-#### GET /list
+### 🚩 GET /list
 Returns all videos in the system.
 - URL Params
 
 None
+- Headers
+
+Content-Type: application/json
+- Data Params
+
+None
+- Success Response
+
+code: 200
+
+content: 
+```{ <video_object> }```
+- Error Response
+   - code: 
+________
+### 🚩 GET /list/:videoID
+Returns the specified video.
+- URL Params
+
+Required: ```videoID=[string]```
 - Headers
 
 Content-Type: application/json
