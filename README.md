@@ -90,77 +90,87 @@ With this database schema and relationships, user information (username and avat
 
 ## API Contract
 ### ▶️ Video
-_________________
 ### 🚩 POST /create
 Create a new video and returns the new object
 - URL Params
 
-None
+  None
 - Headers
 
-Content-Type: application/json
+  Content-Type: application/json
 - Data Params
-```
-{
-   videoID: string,
-   thumbnailUrl: string,
-   title: string,
-   description: string
-}
-```
+  ```
+  {
+     videoID: string,
+     thumbnailUrl: string,
+     title: string,
+     description: string
+  }
+  ```
 - Success Response
 
-code: 200
+  code: 200
 
-content: ```{ <video_object> }```
+  content: ```{ <video_object> }```
+- Error Response
 
-______________
+  code: 500
+
+  content: ```{ error : "Failed to create video"}```
+
 ### 🚩 GET /list
 Returns all videos in the system.
 - URL Params
 
-None
+  None
 - Headers
 
-Content-Type: application/json
+  Content-Type: application/json
 - Data Params
 
-None
+  None
 - Success Response
 
-code: 200
+  code: 200
 
-content: 
-```
-{
-   videos: [
-             <video_object>,
-             <video_object>,
-             <video_object>
-           ]
-}
-```
+  content: 
+  ```
+  {
+     videos: [
+               <video_object>,
+               <video_object>,
+               <video_object>
+             ]
+  }
+  ```
 - Error Response
-   - code: 
-________
+
+  code: 500
+
+  content: ```{ error : "Failed to fetch video"}```
+
+
 ### 🚩 GET /list/:videoID
 Returns the specified video.
 - URL Params
 
-Required: ```videoID=[string]```
+  Required: ```videoID=[string]```
 - Headers
 
-Content-Type: application/json
+  Content-Type: application/json
 - Data Params
 
-None
+  None
 - Success Response
 
-code: 200
+  code: 200
 
-content: 
-```{ <video_object> }```
+  content: ```{ <video_object> }```
+- Error Response
 
+  code: 500
+
+  content: ```{ error : "Failed to fetch video"}```
 ## Installation
 1. Clone the repository
 ```bash
