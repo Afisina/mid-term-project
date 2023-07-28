@@ -265,6 +265,75 @@ Returns the specified product by videoID.
   code: 500
 
   content: ```{ error : "Failed to fetch product"}```
+
+### ▶️ Comment
+### 🚩 POST /submit-comment
+Submit a new comment
+- URL Params
+
+  None
+- Headers
+
+  Content-Type: application/json
+- Data Params
+  ```
+  {
+     videoID: string,
+     username: string,
+     comment: string,
+  }
+  ```
+- Success Response
+
+  code: 200
+
+  content:
+  ```{
+     videoID: string,
+     username: string,
+     comment: string,
+     timestamp: date
+  }
+  ```
+- Error Response
+  code: 404
+
+  content: ```{ error : "User not found"}```
+  
+  code: 500
+
+  content: ```{ error : "Failed to submit comment"}```
+
+### 🚩 GET /:videoID
+Get comments by videoID
+- URL Params
+
+  Required: ```videoID=[string]```
+- Headers
+
+  Content-Type: application/json
+- Data Params
+
+  None
+- Success Response
+
+  code: 200
+
+  content: 
+  ```
+  {
+     comments: [
+               <comment_object>,
+               <comment_object>,
+               <comment_object>
+             ]
+  }
+  ```
+- Error Response
+
+  code: 500
+
+  content: ```{ error : "Failed to fetch comments"}```
   
 ## Installation
 1. Clone the repository
@@ -276,7 +345,7 @@ git clone https://github.com/Afisina/mid-term-project.git
 cd mid-term-project
 npm install
 ```
-3. Setting Up MongoDB Connection (change database url in the .env file)
+3. Optional : change database url in the .env file
 ```javascript
 DATABASE_URL = mongodb://127.0.0.1/tokopedia_play_clone
 ```
